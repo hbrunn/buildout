@@ -435,6 +435,15 @@ where you list them, as in:
 
 In this example, we've requested a version of bobo less than 5.0.
 
+You can also add `environment markers <https://python.org/dev/peps/pep-0496>`_
+to restrict some requirements to i.e. a certain platform or python version:
+
+.. code-block:: ini
+
+  eggs =
+      bobo <5.0; python_version < '3.0'
+      bobo ==5.0; python_version >= '3.0'
+
 The more common way to pin a version is using a ``versions`` section:
 
 .. code-block:: ini
